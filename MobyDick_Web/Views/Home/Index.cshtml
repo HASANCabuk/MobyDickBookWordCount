@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    int i = 0;
+}
+@model IEnumerable<MobyDick_Web.Models.DataModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kelime</th>
+            <th scope="col">Kullanım Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            i++;
+            <tr>
+                <th scope="row">@i</th>
+                <td>@item.word</td>
+                <td>@item.count</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
